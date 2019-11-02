@@ -8,7 +8,7 @@ import java.lang.Exception
 
 class MainActivity : AppCompatActivity() {
 
-    var intensity = 0
+    var option = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,10 +17,9 @@ class MainActivity : AppCompatActivity() {
         next_btn.setOnClickListener {
             handler_intense()
 
+
             val intent = Intent (this, InfoList :: class.java)
-
-
-            intent.putExtra("Intensity", intensity)
+            intent.putExtra("Option", option)
             startActivity(intent)
 
 
@@ -30,7 +29,7 @@ class MainActivity : AppCompatActivity() {
     fun handler_intense() {
         try {
 
-            intensity = when(select_rad.checkedRadioButtonId){
+            option = when(select_rad.checkedRadioButtonId){
                 R.id. abs_rad -> 10
                 R.id. arm_rad -> 8
                 R.id. back_rad -> 12
@@ -41,16 +40,15 @@ class MainActivity : AppCompatActivity() {
                 else -> throw Exception()
             }
 
-            if (intensity == 10){
+            if (option == 10){
                 println("abs")
             }
-            else if (intensity == 8){
+            else if (option == 8){
                 println("arm")
             }
-            else if (intensity == 14){
+            else if (option == 14){
                 println("calves")
             }
-
 
         }catch (e: Exception){
 
