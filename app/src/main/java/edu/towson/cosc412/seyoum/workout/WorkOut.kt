@@ -16,6 +16,7 @@ class WorkOut : AppCompatActivity() {
         val title = intent.getStringExtra("Title")
         val description = intent.getStringExtra("Description")
         val id = intent.getIntExtra("Id", -1)
+        val license = intent.getIntExtra("License", 1)
 
 
         title_view.text = title
@@ -39,6 +40,12 @@ class WorkOut : AppCompatActivity() {
             num_set.text = "you choice " + intensity
             num_reps.text = "you choice " + intensity
             num_weight.text = "you choice " + intensity
+        }
+
+        license_btn.setOnClickListener {
+            val i = Intent(this, License::class.java)
+            i.putExtra("License", license)
+            startActivity(i)
         }
 
 

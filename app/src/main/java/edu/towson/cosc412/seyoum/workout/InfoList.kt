@@ -66,7 +66,7 @@ class InfoList : AppCompatActivity() {
                 for (elm in homeFeed.results){
                     if (elm.category == category){
                         println(elm.description)
-                        list.add(DataModel(elm.id,elm.name,elm.description))
+                        list.add(DataModel(elm.id,elm.name,elm.description,elm.license))
                     }
                 }
 

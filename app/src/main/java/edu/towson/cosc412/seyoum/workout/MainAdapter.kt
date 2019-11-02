@@ -47,6 +47,7 @@ class CustomViewHolder(val view: View, var list: ArrayList<DataModel>): Recycler
             intent.putExtra("Title", list[position].title)
             intent.putExtra("Description", list[position].description)
             intent.putExtra("Id", list[position].id)
+            intent.putExtra("License", list[position].license)
             view.context.startActivity(intent)
         }
     }

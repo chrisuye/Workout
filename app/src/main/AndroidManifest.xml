@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ShowStep"></activity>
+        <activity android:name=".License"></activity>
+        <activity android:name=".ShowStep" />
         <activity android:name=".WorkOut" />
         <activity android:name=".Workout" />
         <activity android:name=".InfoList" />
