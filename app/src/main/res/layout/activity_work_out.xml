@@ -102,19 +102,19 @@
             android:id="@+id/flex_rad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Flexable" />
+            android:text="Strength" />
 
         <RadioButton
             android:id="@+id/Gen_rad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="General" />
+            android:text="Endurance" />
 
         <RadioButton
             android:id="@+id/bod_rad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Body Builder" />
+            android:text="General Fitness" />
     </RadioGroup>
 
     <TextView

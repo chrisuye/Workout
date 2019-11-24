@@ -3,6 +3,7 @@ package edu.towson.cosc412.seyoum.workout
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_work_out.*
 import java.lang.Exception
 
@@ -30,16 +31,27 @@ class WorkOut : AppCompatActivity() {
         }
 
         int_btn.setOnClickListener {
-            val intensity = when (int_group.checkedRadioButtonId){
-                R.id. flex_rad -> 1
-                R.id. Gen_rad -> 2
-                R.id. bod_rad -> 3
-                else -> throw Exception()
+            when (int_group.checkedRadioButtonId){
+                R.id. flex_rad -> {
+                    num_set.text = "3 to 8 reps"
+                    num_reps.text = "3 minute rest on between sets"
+                    num_weight.text = "Rest the body part for 48 hours"}
+                R.id. Gen_rad -> {
+                    num_set.text = "15 to 25 reps"
+                    num_reps.text = "1 minute rest on between sets"
+                    num_weight.text = "Rest the body part for 48 hours"
+                }
+                R.id. bod_rad -> {
+                    num_set.text = "8 to 12 reps"
+                    num_reps.text = "2 minute rest on between sets"
+                    num_weight.text = "Rest the body part for 48 hours"
+                }
+                else -> {
+                    Toast.makeText(this,"select intensity", Toast.LENGTH_SHORT).show()
+                }
             }
 
-            num_set.text = "you choice " + intensity
-            num_reps.text = "you choice " + intensity
-            num_weight.text = "you choice " + intensity
+
         }
 
         license_btn.setOnClickListener {
